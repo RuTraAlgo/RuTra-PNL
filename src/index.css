@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 92%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 142 70% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 220 14% 92%;
+    --accent-foreground: 220 20% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 142 70% 40%;
+
+    --radius: 0.75rem;
+
+    --profit: 142 70% 40%;
+    --profit-foreground: 142 80% 25%;
+    --profit-bg: 142 70% 40%;
+
+    --loss: 0 72% 51%;
+    --loss-foreground: 0 80% 35%;
+    --loss-bg: 0 72% 51%;
+
+    --chart-green: 142 70% 40%;
+    --chart-red: 0 72% 51%;
+    --chart-blue: 217 91% 60%;
+    --chart-amber: 38 92% 50%;
+    --chart-purple: 270 70% 60%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 142 70% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 220 20% 15%;
+    --sidebar-border: 220 13% 88%;
+    --sidebar-ring: 142 70% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .font-mono-trade {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .text-profit {
+    color: hsl(var(--profit));
+  }
+  .text-loss {
+    color: hsl(var(--loss));
+  }
+  .bg-profit-subtle {
+    background-color: hsl(var(--profit) / 0.08);
+  }
+  .bg-loss-subtle {
+    background-color: hsl(var(--loss) / 0.08);
+  }
+  .border-profit {
+    border-color: hsl(var(--profit) / 0.25);
+  }
+  .border-loss {
+    border-color: hsl(var(--loss) / 0.25);
+  }
+  .glow-profit {
+    box-shadow: 0 1px 8px hsl(var(--profit) / 0.1);
+  }
+  .glow-loss {
+    box-shadow: 0 1px 8px hsl(var(--loss) / 0.1);
+  }
+}
